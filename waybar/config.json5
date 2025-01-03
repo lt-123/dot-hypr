@@ -1,0 +1,51 @@
+{
+  "layer": "top",
+  "position": "top",
+  "modules-left": ["hyprland/workspaces", "layout"],
+  "modules-center": ["clock"],
+  "modules-right": ["cpu", "memory", "temperature", "tray", "backlight", "pulseaudio"],
+  "hyprland/workspaces": {
+    "disable-scroll": true,
+    "format": "{name}: {icon}",
+    "format-icons": {
+      "1": "",
+      "2": "",
+      "3": "",
+      "4": "",
+      "5": "",
+      "active": "",
+      "default": "-"
+    }
+  },
+  "layout": {
+    "format": "{layout}",
+    "exec": "hyprctl getlayout"
+  },
+  "clock": {
+    "format": "{:%Y-%m-%d %H:%M:%S}",
+    "tooltip": false
+  },
+  "cpu": {
+    "format": "{usage}%",
+    "tooltip-format": "CPU Usage: {usage}%"
+  },
+  "memory": {
+    "format": " {used} / {total} GB",
+    "tooltip-format": "Memory: {used} / {total} GB"
+  },
+  "temperature": {
+    "format": " {temperature}°C",
+    "exec": "sensors | grep 'Package id 0:' | awk '{print $4}'"
+  },
+  "tray": {
+    "icon-size": 18,
+    "spacing": 15
+  },
+  "backlight": {
+    "format": " {percent}%",
+    "device": "intel_backlight"
+  },
+  "pulseaudio": {
+    "format": " {volume}%"
+  }
+}
