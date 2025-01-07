@@ -8,13 +8,13 @@
     "disable-scroll": true,
     "format": "{name}: {icon}",
     "format-icons": {
-      "1": "",
-      "2": "",
-      "3": "",
-      "4": "",
-      "5": "",
-      "active": "",
-      "default": "-"
+      "1": "vivaldi",
+      "2": "develop",
+      "3": "message",
+      "4": "notepad",
+      "10": "windows",
+      "active": "🤪",
+      "default": "++"
     }
   },
   "layout": {
